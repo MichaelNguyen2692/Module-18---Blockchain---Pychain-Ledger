@@ -15,13 +15,6 @@ You’ll make the following updates to the provided Python file for this assignm
 4. Test the PyChain Ledger by Storing Records.
 
 ---
-## Files
-
-Download the following files to help you get started:
-
-[Module 18 Homework files](Starter_Code/pychain.py)
-
----
 
 ## Instructions
 
@@ -90,14 +83,44 @@ Test your complete `PyChain` ledger and user interface by running your Streamlit
 5. Test the blockchain validation process by using the web interface. Take a screenshot of the Streamlit application page, which should indicate the validity of the blockchain. Include the screenshot in the `README.md` file for your homework repository.
 
 ---
-## Submission
 
-You’ll upload the Python file for this assignment to your GitHub repository.
 
-* Make sure to update the `README.md` file to include an explanation of the Steamlit application, a screenshot or video of your deployed Streamlit application, and any other information that’s needed to interact with your project.
+## Streamlit application guidance
+1. To start the application, open Git Bash and navigate to the "Code" folder. Then run the command line: ***streamlit run pychain.py***
+Git Bash terminal will display similarly to the following photo
 
-* Submit the link to your GitHub project to Bootcamp Spot.
+![](Images/pychain_terminal_start.png)
 
----
+When the streamlit application is ready on the web browser, the main page will be as below photo
 
-© 2021 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+![](Images/pychain_streamlit.png)
+
+2. Navigating and using the application
+
++ On the left panel, there will be "Block difficulty" to be adjusted. And with the "Block Inspector", the user can navigate to a particular transaction recorded to check it's related information. 
+
++ On the right panel, there are 3 boxes which user can fill in: "Sender", "Receiver", and "Amount". "Sender" and "Receiver" will take input value as strings and "Amount" will take input value as float. After keying in the information, a transaction can be executed by clicking "Add Block" button. Then this transaction will be recorded in "The PyChain Ledger".
+
+To understand the process better, let's see how the application runs when there is a transaction with the below photos:
+
+![](Images/pychain_1st_streamlit.png)
+
+With this first transaction, the first block was added with the "Block Difficulty" of 1 and the Sender, Receiver, and Amount information as shown. In the ledger, the record name and previous hash were recorded.
+
+In the terminal, when a transaction is recorded, it displays the "Winning Hash"
+
+![](Images/pychain_1st.png)
+
+3. Validating the block chain.
+
++  When there are multiples transactions are recorded, the user can check their information by using the drop-down menu from the "Block Inspector".
+
+![](Images/dropdown.png)
+
++ All the blocks will be recorded in the ledger. If user want to validate the block chain, they can click on the "Validate Chain" button. If the block chain is valid, it will show the value "True" under the button. 
+
+![](Images/pychain_streamlit_final.png)
+
+The Git Bash terminal also records all the winning hashes of the block chain. And when user validates the block chain, the terminal will display "Block chain is valid" if it is validated. 
+
+![](Images/pychain_terminal_final.png)
